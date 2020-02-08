@@ -1,0 +1,25 @@
+---
+- name: Install apache
+  hosts: clients
+  become: true
+
+  tasks:
+  - name: Update
+    apt:
+      name: epel-release
+      state: present
+
+  - name: Install apache
+    apt:
+      name: apache2
+      state: present
+
+  - name: Insert Index Page
+    copy:
+      src: index.html
+      dest: /etc/www/html/index.html
+
+  - name: Start apache
+    service:
+      name: apache2
+      state: started

@@ -1,0 +1,12 @@
+1.  sudo apt-get update
+2. sudo apt-get install openjdk-8-jdk
+3. wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add -
+////////-----
+3. wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
+4. sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+///////------
+4. sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+5. sudo apt-get update
+6. sudo apt-get install jenkins
+
+https://linuxize.com/post/how-to-install-jenkins-on-ubuntu-18-04/
